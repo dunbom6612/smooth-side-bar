@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styled.css" />
+    <title>Smooth Scroll Bar</title>
+  </head>
+  <body>
+    <div class="side-bar">
+      <div class="logo-name-wrapper">
+        <div class="logo-name">
+          <img
+            src="./assets/images/logo.png"
+            class="logo"
+            alt="logo app"
+            srcset=""
+          />
+          <span class="logo-name__name">Lincoln Botosh</span>
+        </div>
+        <button class="logo-name__button">
+          <i
+            class="bx bx-arrow-from-right logo-name__icon"
+            id="logo-name__icon"
+          ></i>
+        </button>
+        <!-- <i class='bx bx-arrow-from-left'></i> -->
+      </div>
+
+      <div class="message">
+        <i class="message-icon bx bx-message-square-edit"></i>
+        <span class="message-text">New Mesage</span>
+        <span class="tooltip">New Mesage</span>
+      </div>
+
+      <ul class="features-list">
+        <li class="features-item inbox active">
+          <i class="bx bxs-inbox features-item-icon inbox-icon"
+            ><span class="status"></span
+          ></i>
+          <span class="features-item-text">Inbox</span>
+          <span class="inbox-number">99</span>
+          <span class="tooltip">Inbox</span>
+        </li>
+
+        <li class="features-item draft">
+          <i class="bx bx-file-blank features-item-icon"></i>
+          <span class="features-item-text">Draft</span>
+          <span class="tooltip">Draft</span>
+        </li>
+
+        <li class="features-item star">
+          <i class="bx bx-star features-item-icon"></i>
+          <span class="features-item-text">Starred</span>
+          <span class="tooltip">Starred</span>
+        </li>
+        <li class="features-item sent">
+          <i class="bx bx-send features-item-icon"></i>
+          <span class="features-item-text">Sent</span>
+          <span class="tooltip">Sent</span>
+        </li>
+        <li class="features-item trash">
+          <i class="bx bx-trash features-item-icon"></i>
+          <span class="features-item-text">Trash</span>
+          <span class="tooltip">Trash</span>
+        </li>
+        <li class="features-item spam">
+          <i class="bx bx-message-square-error features-item-icon"></i>
+          <span class="features-item-text">Spam</span>
+          <span class="tooltip">Spam</span>
+        </li>
+      </ul>
+
+      <ul class="category-list">
+        <div class="category-header">Message categories</div>
+        <li class="category-item">
+          <span
+            class="category-item-status"
+            style="background-color: #79d861"
+          ></span
+          ><span class="category-item-text">My works</span
+          ><span class="category-item-number">9</span>
+          <span class="tooltip">My works</span>
+        </li>
+        <li class="category-item">
+          <span
+            class="category-item-status"
+            style="background-color: #c43c5d"
+          ></span
+          ><span class="category-item-text">Accountant</span
+          ><span class="category-item-number">43</span>
+          <span class="tooltip">Accountant</span>
+        </li>
+        <li class="category-item">
+          <span
+            class="category-item-status"
+            style="background-color: #ff5050"
+          ></span
+          ><span class="category-item-text">Works</span
+          ><span class="category-item-number">78</span>
+          <span class="tooltip">Works</span>
+        </li>
+        <li class="category-item">
+          <span
+            class="category-item-status"
+            style="background-color: #42ffdd"
+          ></span
+          ><span class="category-item-text">Marketing</span
+          ><span class="category-item-number">253</span>
+          <span class="tooltip">Marketing</span>
+        </li>
+      </ul>
+
+      <ul class="chat-list">
+        <div class="chat-header">recent chats</div>
+        <button class="chat-new-btn">
+          <i class="bx bxs-plus-circle chat-icon"></i>
+          <span class="chat-new-btn-text">Start New Chat</span>
+          <span class="tooltip">New Chat</span>
+        </button>
+
+        <li class="chat-item">
+          <span class="chat-item-avatar-wrapper has-message">
+            <img
+              src="./assets/images/chris-evans.jpg"
+              alt="avatar"
+              class="chat-item-avatar"
+            />
+          </span>
+          <span class="chat-item-name">Steve Rogers</span>
+          <span class="chat-item-number">53</span>
+        </li>
+        <li class="chat-item">
+          <span class="chat-item-avatar-wrapper">
+            <img
+              src="./assets/images/tony-stark.jpg"
+              alt="avatar"
+              class="chat-item-avatar"
+            />
+          </span>
+          <span class="chat-item-name">Tony Stark</span
+          ><span
+            class="chat-item-status"
+            style="background-color: #79d861"
+          ></span>
+        </li>
+      </ul>
+    </div>
+    <script type="text/javascript">
+      {
+        let sideBar = document.querySelector('.side-bar');
+        let arrowCollapse = document.querySelector('#logo-name__icon');
+        sideBar.onclick = () => {
+          sideBar.classList.toggle('collapse');
+          arrowCollapse.classList.toggle('collapse');
+          if (arrowCollapse.classList.contains('collapse')) {
+            arrowCollapse.classList =
+              'bx bx-arrow-from-left logo-name__icon collapse';
+          } else {
+            arrowCollapse.classList = 'bx bx-arrow-from-right logo-name__icon';
+          }
+        };
+      }
+    </script>
+  </body>
+</html>
